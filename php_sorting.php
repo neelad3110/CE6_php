@@ -6,12 +6,12 @@
     for($i=0;$i<$len_index;$i++){ echo $arr_index[$i]." ";}
     echo "<br>";
     
-    echo "<br>";
+    echo "<br>";                // simple sort function
     echo "Using sort()   :     ";
     sort($arr_index);
     for($i=0;$i<$len_index;$i++){ echo $arr_index[$i]." ";}
     
-    echo "<br>";
+    echo "<br>";                // reverse sort function
     echo "Using rsort()  :     ";
     rsort($arr_index);
     for($i=0;$i<$len_index;$i++){ echo $arr_index[$i]." ";}
@@ -22,25 +22,27 @@
     print_r($arr_associative);
     echo"<br>";
     
-    echo "<br>";
+    echo "<br>";        //sorting values in associative array
     echo "Using asort()  :     ";
     asort($arr_associative);
     print_r($arr_associative);
     
-    echo "<br>";
+    echo "<br>";        //reverse sorting values in associative array 
     echo "Using arsort()  :     ";
     arsort($arr_associative);
     print_r($arr_associative);
 
-    echo "<br>";
+    echo "<br>";         //sorting keys in associative array   
     echo "Using ksort()  :     ";
     ksort($arr_associative);
     print_r($arr_associative);
 
-    echo "<br>";
+    echo "<br>";            //reverse sorting values in associative array
     echo "Using krsort()  :     ";
     krsort($arr_associative);
     print_r($arr_associative);
+
+    
 
     echo"<br><br>";
     $temp=array("img1.jpg","img00.jpg","img115.jpg","img3.jpg","img22.jpg");
@@ -53,7 +55,7 @@
     sort($temp);
     print_r($temp);
 
-    echo "<br>";
+    echo "<br>";                    //natsort vs sort
     echo "Using natsort()  :     ";
     natsort($temp);
     print_r($temp);
@@ -75,38 +77,38 @@
     echo"<br>";
 
 
-    echo "<br>";
+    echo "<br>";                        //sum of elements
     echo "Array Index 1 Sum  :     ";
     echo array_sum($arr_index);
 
-    echo "<br>";
+    echo "<br>";                     // searching value with use of key
     echo "Searching Name of Enrollment ID [72]  :     ";
     print(array_search("72",$arr_associative));
     
-    echo "<br>";
+    echo "<br>";                    // counting distinct values in array
     echo "Types of fruits available  :      ";
     $level=array_count_values($fruits);
     print_r($level);
 
-    echo "<br>";
+    echo "<br>";                    // array with custom range
     echo "Range (0-8) :      ";
     $range=range(0,8);
     print_r($range);
 
-    echo "<br>";
+    echo "<br>";                    // shuffling array elements
     echo "Shuffling Fruits array :      ";
     shuffle($fruits);
     print_r($fruits);
 
-    echo "<br><br>";
+    echo "<br><br>";                // merging 2 arrays
     echo "Merging Index array 1 and fruits  :      ";
     print_r(array_merge($arr_index,$fruits));
 
-    echo "<br><br>";
+    echo "<br><br>";                // chaning key to UPPERCASE
     echo "Making Name UPPERCASE   :      ";
     print_r(array_change_key_case($arr_associative,CASE_UPPER));
 
-    echo "<br>";
+    echo "<br>";                    // diving array into groups of 2
     echo "Making chunks of fruits in 2  :      ";
     $chunks=array_chunk($fruits,2,true);
     print_r($chunks);
@@ -122,7 +124,7 @@
     );
     print_r($multid_array);
     
-    echo "<br><br>";
+    echo "<br><br>";            // list of values as per column
     echo "Values of Album Column  :      ";
     print_r(array_column($multid_array,'Album'));
   
@@ -135,7 +137,7 @@
     echo"<br>Set 2 elements : ";
     for($i=0;$i<count($set2);$i++){ echo $set2[$i]." - ";}
 
-    echo "<br><br>";
+    echo "<br><br>";            // finding difference between 2 arrays
     echo "Elements of Set1 not in Set2  :      ";
     print_r(array_diff($set1,$set2));
     
